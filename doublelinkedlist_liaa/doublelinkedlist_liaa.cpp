@@ -34,3 +34,9 @@ void addNode() {
 		}
 		newNode->prev = NULL; //step 5: make the new node point to NULL
 		START = newNode; //step 6: make the new node the first try mode
+
+	}
+	else {
+		//insert the new node in the middle pr at the end
+		Node* current = START; //step 1.a: start from the first mode
+		Node* previous = NULL; //step 1.b: previous node is NULL initially
