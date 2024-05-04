@@ -125,6 +125,16 @@ void deleteNode()
 			START->prev = NULL; //step
 		}
 	}
+	else
+	{ //Node to deleted is npt the first node
+		previous->next = current->next;
+		if (current->next != NULL)
+		{ //If there's a successor, update its prev pointer
+			current->next->prev = previous;
+
+		}
+	}
+
 
 
 	
