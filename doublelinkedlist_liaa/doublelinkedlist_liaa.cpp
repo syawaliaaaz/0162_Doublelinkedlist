@@ -126,7 +126,7 @@ void deleteNode()
 		}
 	}
 	else
-	{ //Node to deleted is npt the first node
+	{ //Node to deleted is not the first node
 		previous->next = current->next;
 		if (current->next != NULL)
 		{ //If there's a successor, update its prev pointer
@@ -134,6 +134,13 @@ void deleteNode()
 
 		}
 	}
+
+	//Release the memory of the node marked as current
+	delete current;
+	cout << "\x1b[32mRecord with roll number] " << rollNo << " deleted\x1b[0m" << endl;
+
+}
+
 
 
 
